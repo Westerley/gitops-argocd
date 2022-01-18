@@ -18,7 +18,7 @@ docker push westerley/app
 kubectl create namespace argocd
 
 # 2 - Install argo-cd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 # 3 - Port forward
 kubectl port-forward svc/argocd-server -n argocd 8080:443
