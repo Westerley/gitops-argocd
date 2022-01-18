@@ -5,6 +5,7 @@ A3Lab GitOps com ArgoCD
 #### Build e Push Mkdocs
 
 ```sh
+mkdocs new app
 docker build -t westerley/app .
 docker run -p 8000:8000 westerley/app
 docker push westerley/app
