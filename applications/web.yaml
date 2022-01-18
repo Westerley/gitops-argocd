@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mkdocs
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Westerley/gitops-argocd
+    targetRevision: HEAD
+    path: k8s/web
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
