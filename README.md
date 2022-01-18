@@ -37,6 +37,11 @@ kubectl create secret generic ssh-private-secret --from-file=sshPrivateKey=/home
 kubectl apply -f k8s/argocd/configmap.yaml
 ```
 
+#### Apply argocd application
+```sh
+kubectl apply -f applications/web-private.yaml
+```
+
 #### Reference
 
 https://argo-cd.readthedocs.io/en/release-1.8/operator-manual/declarative-setup/
