@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mkdocs
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: mkdocs
